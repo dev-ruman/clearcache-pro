@@ -9,7 +9,7 @@ ClearCache Pro is a one-click browser cleaner that clears cache, cookies, local 
 ![Browsers](https://img.shields.io/badge/Chrome%20%7C%20Edge%20%7C%20Brave-supported-312e81)
 
 <p align="center">
-  <a href="https://dev-ruman.github.io/clearcache-pro/cache_cleaner_extension_simulator.html">
+  <a href="https://dev-ruman.github.io/clearcache-pro/simulator.html">
     <img src="https://img.shields.io/badge/▶%20Launch-Live%20Simulator-6366f1?style=for-the-badge" alt="Launch Live Simulator">
   </a>
 </p>
