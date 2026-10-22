@@ -9,7 +9,7 @@ ClearCache Pro is a one-click browser cleaner that clears cache, cookies, local 
 ![Browsers](https://img.shields.io/badge/Chrome%20%7C%20Edge%20%7C%20Brave-supported-312e81)
 
 <p align="center">
-  <a href="https://dev-ruman.github.io/clearcache-pro/simulator.html">
+  <a href="https://dev-ruman.github.io/clearcache-pro/">
     <img src="https://img.shields.io/badge/▶%20Launch-Live%20Simulator-6366f1?style=for-the-badge" alt="Launch Live Simulator">
   </a>
 </p>
@@ -18,7 +18,7 @@ ClearCache Pro is a one-click browser cleaner that clears cache, cookies, local 
 
 ## 🚀 Live Demo
 
-**👉 [Try the Live Simulator](https://dev-ruman.github.io/clearcache-pro/simulator.html)**
+**👉 [Try the Live Simulator](https://dev-ruman.github.io/clearcache-pro/)**
 
 No installation needed. The simulator runs entirely in your browser and shows how the extension behaves before you add it to Chrome.
 
@@ -42,7 +42,7 @@ git clone https://github.com/dev-ruman/clearcache-pro.git
 cd clearcache-pro
 ```
 
-Then open `cache_cleaner_extension_simulator.html` in any modern browser. No build step is required.
+Then open `index.html` in any modern browser. No build step is required.
 
 ### Host it yourself with GitHub Pages
 
@@ -50,13 +50,11 @@ Then open `cache_cleaner_extension_simulator.html` in any modern browser. No bui
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**.
 4. Select the `main` branch and the `/ (root)` folder, then click **Save**.
-5. After a minute, your simulator will be live at:
+5. After a minute or two, your simulator will be live at:
 
 ```
-https://dev-ruman.github.io/clearcache-pro/cache_cleaner_extension_simulator.html
+https://dev-ruman.github.io/clearcache-pro/
 ```
-
-> 💡 Tip: rename the file to `index.html` if you want the simulator to load at `https://dev-ruman.github.io/clearcache-pro/`.
 
 ---
 
@@ -84,9 +82,11 @@ https://dev-ruman.github.io/clearcache-pro/cache_cleaner_extension_simulator.htm
 
 Follow these steps to load the extension into Google Chrome, Brave, or Edge in Developer Mode.
 
-### Step 1: Download Code Files
+### Step 1: Get the Extension Files
 
-Open the **Extension Files** tab in the simulator, then copy each file or click **Download Extension Bundle**. Save all files into a local folder on your computer, for example `/ClearCacheExtension`.
+Clone or download this repository. The extension files are in the [`ClearCache Pro`](https://github.com/dev-ruman/clearcache-pro/tree/main/ClearCache%20Pro) folder.
+
+You can also open the **Extension Files** tab in the simulator and click **Download Extension Bundle** to save the files into a local folder (for example `/ClearCacheExtension`).
 
 ### Step 2: Enable Developer Mode
 
@@ -100,7 +100,7 @@ Toggle on **Developer mode** in the top-right corner.
 
 ### Step 3: Load Unpacked
 
-Click **Load unpacked** and select the folder containing the extension files. The extension will appear in your toolbar immediately.
+Click **Load unpacked** and select the `ClearCache Pro` folder (the one containing `manifest.json`). The extension will appear in your toolbar immediately.
 
 ---
 
@@ -114,17 +114,31 @@ Click **Load unpacked** and select the folder containing the extension files. Th
 
 ---
 
-## 🗂️ Project Files
+## 🗂️ Project Structure
+
+```
+clearcache-pro/
+├── ClearCache Pro/
+│   ├── icons/
+│   ├── background.js
+│   ├── manifest.json
+│   ├── popup.html
+│   └── popup.js
+├── index.html
+├── LICENSE
+└── README.md
+```
 
 | File | Description |
 |---|---|
-| `cache_cleaner_extension_simulator.html` | Interactive live simulator, source viewer, and install guide |
-| `manifest.json` | Extension configuration, permissions, and entry points |
-| `popup.html` | The popup user interface |
-| `popup.js` | Popup logic and Chrome API interaction |
-| `background.js` | Background service worker that performs the data cleanup |
+| `index.html` | Interactive live simulator, source viewer, and install guide |
+| `ClearCache Pro/manifest.json` | Extension configuration, permissions, and entry points |
+| `ClearCache Pro/popup.html` | The popup user interface |
+| `ClearCache Pro/popup.js` | Popup logic and Chrome API interaction |
+| `ClearCache Pro/background.js` | Background service worker that performs the data cleanup |
+| `ClearCache Pro/icons/` | Extension icons (16, 48, and 128 px) |
 
-> **Note:** The manifest references an `icons/` folder (`icon16.png`, `icon48.png`, `icon128.png`). Add these icons before loading the extension.
+> **Note:** The manifest references the `icons/` folder (`icon16.png`, `icon48.png`, `icon128.png`). Make sure these exist before loading the extension.
 
 ---
 
@@ -149,4 +163,4 @@ If you find this project useful, consider giving it a ⭐ on GitHub!
 
 ## 📄 License
 
-____________________________
+This project is licensed under the [MIT License](LICENSE).
